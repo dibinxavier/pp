@@ -11,7 +11,7 @@ import (
 
 func main() {
 	var endpoint = "http://ip-api.com/batch"
-	ip := []string{"103.198.128.77"}
+	ip := []string{"103.198.128.77"};
 	ipapiClient := http.Client{}
 	data, _ := json.Marshal(ip)
 	req, err := http.NewRequest(http.MethodPost, endpoint, bytes.NewReader(data))
