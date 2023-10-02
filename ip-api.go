@@ -39,18 +39,18 @@ type IpApiResponse struct {
 	CountryCode string `json:"countryCode"`
 }
 
-// var endpoint = "http://ip-api.com/batch"
-// ip := []string{ipAddress}
-// ipapiClient := http.Client{}
-// data, _ := json.Marshal(ip)
-// req, err := http.NewRequest(http.MethodPost, endpoint, bytes.NewReader(data))
-// resp, err := ipapiClient.Do(req)
-// if err != nil {
-// 	logger.Error.Println(err)
-// }
-// var country []IpApiResponse
-// body, err := ioutil.ReadAll(resp.Body)
-// if err != nil {
-// 	logger.Error.Println(err)
-// }
-// json.Unmarshal(body, &country)
+var endpoint = "http://ip-api.com/batch"
+ip := []string{ipAddress}
+ipapiClient := http.Client{}
+data, _ := json.Marshal(ip)
+req, err := http.NewRequest(http.MethodPost, endpoint, bytes.NewReader(data))
+resp, err := ipapiClient.Do(req)
+if err != nil {
+	logger.Error.Println(err)
+}
+var country []IpApiResponse
+body, err := ioutil.ReadAll(resp.Body)
+if err != nil {
+	logger.Error.Println(err)
+}
+json.Unmarshal(body, &country)
