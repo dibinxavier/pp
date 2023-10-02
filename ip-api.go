@@ -29,9 +29,9 @@ func main() {
 	fmt.Print(country[0].CountryCode, "\n")
 	// country[0].CountryCode = "IN"
 	if country[0].CountryCode != "SG" && country[0].CountryCode != "US" && country[0].CountryCode != "IN" {
-		fmt.Print("Invalid country")
+		fmt.Print("Invalid country");
 	} else {
-		fmt.Print("Valid country")
+		fmt.Print("Valid country");
 	}
 }
 
